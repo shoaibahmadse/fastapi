@@ -20,7 +20,7 @@ async def jd(job_title: str = Form(...), vacancy: str = Form(...), gender: str =
 
 
 def job_description(job_title,vacancy,gender,exprience):
-    llm = OpenAI(temperature=0, max_tokens=1000, openai_api_key="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")
+    llm = OpenAI(temperature=0, max_tokens=1000, openai_api_key="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")
     template = """i have vacancy of {vacancy} person for a job {job_title} which is a {gender} vanacy and required job exprience is {exprience}. Give me a proper description of this which include : Description of the job , Responsibilites, Requirements.Note: Does not include any of the additional text. 
                 """
     prompt_template = PromptTemplate(input_variables=["job_title","vacancy","gender","exprience"], template=template)
